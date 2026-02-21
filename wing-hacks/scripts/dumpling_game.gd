@@ -66,29 +66,29 @@ func update_dumpling_appearance() -> void:
 	# This checks combinations to decide which image to show
 	if has_celery and has_shrimp and has_soy:
 		dumpling_sprite.texture = img_everything
-		dumpling_sprite.scale = Vector2(0.2, 0.2)
+		dumpling_sprite.scale = Vector2(0.5, 0.5)
 	elif has_shrimp and has_soy:
 		dumpling_sprite.texture = img_shrimp_soy
-		dumpling_sprite.scale = Vector2(0.2, 0.2)
+		dumpling_sprite.scale = Vector2(0.5, 0.5)
 	elif has_celery and has_shrimp:
 		dumpling_sprite.texture = img_celery_shrimp
-		dumpling_sprite.scale = Vector2(0.2, 0.2)
+		dumpling_sprite.scale = Vector2(0.5, 0.5)
 	elif has_celery and has_soy:
 		dumpling_sprite.texture = img_celery_soy
-		dumpling_sprite.scale = Vector2(0.2, 0.2)
+		dumpling_sprite.scale = Vector2(0.5, 0.5)
 	elif has_celery:
 		dumpling_sprite.texture = img_celery
-		dumpling_sprite.scale = Vector2(0.2, 0.2)
+		dumpling_sprite.scale = Vector2(0.5, 0.5)
 	elif has_shrimp:
 		dumpling_sprite.texture = img_shrimp
-		dumpling_sprite.scale = Vector2(0.2, 0.2)
+		dumpling_sprite.scale = Vector2(0.5, 0.5)
 	elif has_soy:
 		dumpling_sprite.texture = img_soy
-		dumpling_sprite.scale = Vector2(0.2, 0.2)
+		dumpling_sprite.scale = Vector2(0.5, 0.5)
 	
 	if is_ruined:
 		dumpling_sprite.texture = img_finished
-		dumpling_sprite.scale = Vector2(0.2, 0.2)		
+		dumpling_sprite.scale = Vector2(0.5, 0.5)	
 		
 	var current_recipe = []
 	if has_celery: current_recipe.append("Celery")
@@ -113,8 +113,8 @@ func check_recipe_complete(current_list: Array) -> bool:
 
 func play_tap_effect() -> void:
 	var tween = create_tween()
-	tween.tween_property(dumpling_sprite, "scale", Vector2(0.2, 0.2), 0.05)
-	tween.tween_property(dumpling_sprite, "scale", Vector2(0.2, 0.2), 0.05)
+	tween.tween_property(dumpling_sprite, "scale", Vector2(0.4, 0.4), 0.05)
+	tween.tween_property(dumpling_sprite, "scale", Vector2(0.4, 0.4), 0.05)
 
 func complete_minigame(success: bool) -> void:
 	Global.minigame_success = success
