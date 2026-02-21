@@ -29,17 +29,20 @@ func _ready():
 
 func _on_celery_btn_pressed() -> void:
 	has_celery = true
+	print("Pressed CELERY →", has_celery, has_shrimp, has_soy)
 	update_dumpling_appearance()
 	play_tap_effect()
 
 func _on_shrimp_btn_pressed() -> void:
 	has_shrimp = true
+	print("Pressed SHRIMP →", has_celery, has_shrimp, has_soy)
 	update_dumpling_appearance()
 	play_tap_effect()
 
 func _on_soy_sauce_2_pressed() -> void:
 	has_soy = true
 	update_dumpling_appearance()
+	print("Pressed SOY →", has_celery, has_shrimp, has_soy)
 	play_tap_effect()
 
 # --- LOGIC FUNCTIONS ---
@@ -50,14 +53,14 @@ func update_dumpling_appearance() -> void:
 		dumpling_sprite.texture = img_finished
 		dumpling_sprite.scale = Vector2(0.2, 0.2)
 		complete_minigame()
-	elif has_celery and has_shrimp:
+	elif has_shrimp and has_soy:
+		dumpling_sprite.texture = img_shrimp_soy
+		dumpling_sprite.scale = Vector2(0.2, 0.2)
+	elif has_shrimp and has_celery:
 		dumpling_sprite.texture = img_celery_shrimp
 		dumpling_sprite.scale = Vector2(0.2, 0.2)
 	elif has_celery and has_soy:
 		dumpling_sprite.texture = img_celery_soy
-		dumpling_sprite.scale = Vector2(0.2, 0.2)
-	elif has_shrimp and has_soy:
-		dumpling_sprite.texture = img_shrimp_soy
 		dumpling_sprite.scale = Vector2(0.2, 0.2)
 	elif has_celery:
 		dumpling_sprite.texture = img_celery
