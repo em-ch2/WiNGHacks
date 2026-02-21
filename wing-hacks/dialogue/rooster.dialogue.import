@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bk0tbesacv1iq"
+path="res://.godot/imported/rooster.dialogue-a8353f2519072723d587122075abd960.tres"
+
+[deps]
+
+source_file="res://dialogue/rooster.dialogue"
+dest_files=["res://.godot/imported/rooster.dialogue-a8353f2519072723d587122075abd960.tres"]
+
+[params]
+
+defaults=true
