@@ -4,8 +4,9 @@
 [ext_resource type="Script" path="res://scripts/transition.gd" id="2_dwiom"]
 [ext_resource type="Texture2D" uid="uid://cieeklh7d6cw5" path="res://assets/winghacks_world.png" id="3_dl158"]
 [ext_resource type="PackedScene" uid="uid://b3vwcxm4qb2u2" path="res://scene/player.tscn" id="4_ev5km"]
+[ext_resource type="Texture2D" uid="uid://b55rhfticckgt" path="res://assets/dog.png" id="5_dwiom"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5qaf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dl158"]
 texture = ExtResource("3_dl158")
 0:0/0 = 0
 1:0/0 = 0
@@ -585,10 +586,12 @@ texture = ExtResource("3_dl158")
 31:17/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_k0rup"]
-sources/0 = SubResource("TileSetAtlasSource_a5qaf")
+sources/0 = SubResource("TileSetAtlasSource_dl158")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqhj0"]
 size = Vector2(128.75, 108.9375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ev5km"]
 
 [node name="dog" type="Node2D" unique_id=27286974]
 
@@ -628,5 +631,16 @@ position = Vector2(288, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene 4/Area2D" unique_id=672832725]
 position = Vector2(-11, -3)
 shape = SubResource("RectangleShape2D_rqhj0")
+
+[node name="dog" type="CharacterBody2D" parent="Scene 4" unique_id=299368718]
+position = Vector2(-1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene 4/dog" unique_id=305674502]
+shape = SubResource("RectangleShape2D_ev5km")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene 4/dog" unique_id=539849986]
+position = Vector2(-241, 51)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("5_dwiom")
 
 [connection signal="body_entered" from="Scene 4/Area2D" to="Scene 4" method="_on_area_2d_body_entered"]

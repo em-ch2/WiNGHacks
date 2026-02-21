@@ -5,15 +5,13 @@
 [ext_resource type="AudioStream" uid="uid://ggp60pyoxb46" path="res://assets/Lotus Pond - Loop.wav" id="2_a0bac"]
 [ext_resource type="AudioStream" uid="uid://du13safyrajhb" path="res://assets/Dragon Dance - Loop.wav" id="3_tmyho"]
 [ext_resource type="Texture2D" uid="uid://dart2p65vsekc" path="res://assets/rooster-removebg-preview.png" id="4_hnm4a"]
-[ext_resource type="Script" uid="uid://m5dv7im0xyup" path="res://scripts/transition.gd" id="4_jsnws"]
-[ext_resource type="Texture2D" uid="uid://b55rhfticckgt" path="res://assets/dog.png" id="5_e4vd1"]
-[ext_resource type="Texture2D" uid="uid://dwp7smi6a4ys4" path="res://assets/horse.png" id="6_1402k"]
+[ext_resource type="Script" path="res://scripts/transition.gd" id="4_jsnws"]
 [ext_resource type="PackedScene" uid="uid://b3vwcxm4qb2u2" path="res://scene/player.tscn" id="7_a0bac"]
 [ext_resource type="Texture2D" uid="uid://l35lga0ebo5o" path="res://assets/sheep-removebg-preview.png" id="7_ol7uo"]
 [ext_resource type="Texture2D" uid="uid://00ua18qpjwdx" path="res://assets/pig-removebg-preview.png" id="8_a7xoa"]
 [ext_resource type="Texture2D" uid="uid://dfhggeo6g872f" path="res://assets/rat.png" id="9_vme25"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x11oh"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ghph"]
 texture = ExtResource("1_bqa5m")
 0:0/0 = 0
 1:0/0 = 0
@@ -593,7 +591,7 @@ texture = ExtResource("1_bqa5m")
 31:17/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7h02s"]
-sources/0 = SubResource("TileSetAtlasSource_x11oh")
+sources/0 = SubResource("TileSetAtlasSource_7ghph")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsnws"]
 size = Vector2(128.75, 108.9375)
@@ -654,27 +652,6 @@ shape = SubResource("RectangleShape2D_fj7yv")
 [node name="Sprite2D" type="Sprite2D" parent="rooster" unique_id=1646724806]
 position = Vector2(450, 209)
 texture = ExtResource("4_hnm4a")
-
-[node name="dog" type="CharacterBody2D" parent="." unique_id=570444911]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dog" unique_id=1543742664]
-shape = SubResource("RectangleShape2D_fj7yv")
-
-[node name="Sprite2D" type="Sprite2D" parent="dog" unique_id=1357795784]
-position = Vector2(44, 114)
-texture = ExtResource("5_e4vd1")
-
-[node name="horse" type="CharacterBody2D" parent="." unique_id=942448802]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="horse" unique_id=1176435324]
-shape = SubResource("RectangleShape2D_fj7yv")
-
-[node name="Sprite2D" type="Sprite2D" parent="horse" unique_id=240860510]
-position = Vector2(-412, 438)
-scale = Vector2(3, 3)
-texture = ExtResource("6_1402k")
 
 [node name="sheep" type="CharacterBody2D" parent="." unique_id=624848535]
 visible = false

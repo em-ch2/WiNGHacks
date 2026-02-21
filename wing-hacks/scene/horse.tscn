@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/transition.gd" id="2_soy0r"]
 [ext_resource type="Texture2D" uid="uid://cieeklh7d6cw5" path="res://assets/winghacks_world.png" id="3_olieo"]
 [ext_resource type="PackedScene" uid="uid://b3vwcxm4qb2u2" path="res://scene/player.tscn" id="4_r8qao"]
+[ext_resource type="Texture2D" uid="uid://dwp7smi6a4ys4" path="res://assets/horse.png" id="5_soy0r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66y0d"]
 texture = ExtResource("3_olieo")
@@ -590,6 +591,8 @@ sources/0 = SubResource("TileSetAtlasSource_66y0d")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ofbe"]
 size = Vector2(128.75, 108.9375)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olieo"]
+
 [node name="horse" type="Node2D" unique_id=1845130075]
 
 [node name="Scene 7" type="Node" parent="." unique_id=1613168622]
@@ -599,6 +602,7 @@ script = ExtResource("1_35q7m")
 script = ExtResource("2_soy0r")
 
 [node name="ColorRect" type="ColorRect" parent="Scene 7/transitions" unique_id=2088385892]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -615,6 +619,7 @@ position = Vector2(-347, 18)
 scale = Vector2(0.05, 0.05)
 
 [node name="collisions" type="StaticBody2D" parent="Scene 7" unique_id=1153713675]
+visible = false
 position = Vector2(-988, -369)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Scene 7/collisions" unique_id=274441752]
@@ -623,10 +628,22 @@ scale = Vector2(0.07243022, 0.069915794)
 polygon = PackedVector2Array(1225, -25, 10815, 45, 10857, 45, 10801, 2600, 12644, 2558, 12644, 4163, 1084.7988, 4289.562, 988.1538, 27.291992, -855, 6020, 13816, 6494, 14263, 1846, 13732, -1462, 1336, -1072, -813, -988, -4, -25)
 
 [node name="Area2D" type="Area2D" parent="Scene 7" unique_id=1009181329]
+visible = false
 position = Vector2(288, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene 7/Area2D" unique_id=125384050]
 position = Vector2(-11, -3)
 shape = SubResource("RectangleShape2D_5ofbe")
+
+[node name="horse" type="CharacterBody2D" parent="Scene 7" unique_id=1635048226]
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene 7/horse" unique_id=1695309673]
+shape = SubResource("RectangleShape2D_olieo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene 7/horse" unique_id=463056398]
+position = Vector2(1350, 380)
+scale = Vector2(2, 2)
+texture = ExtResource("5_soy0r")
 
 [connection signal="body_entered" from="Scene 7/Area2D" to="Scene 7" method="_on_area_2d_body_entered"]
