@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d1q6x2m0vmgxl"]
+
+[ext_resource type="Texture2D" uid="uid://dart2p65vsekc" path="res://assets/rooster-removebg-preview.png" id="1_b0nm2"]
+[ext_resource type="Texture2D" uid="uid://l35lga0ebo5o" path="res://assets/sheep-removebg-preview.png" id="2_msdv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5xwi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eujkc"]
+
+[node name="RoosterSheep" type="Node2D" unique_id=1378423046]
+
+[node name="Rooster" type="CharacterBody2D" parent="." unique_id=1369932556]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooster" unique_id=1177469065]
+shape = SubResource("RectangleShape2D_p5xwi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rooster" unique_id=1863379428]
+position = Vector2(133, 198)
+texture = ExtResource("1_b0nm2")
+
+[node name="Camera2D" type="Camera2D" parent="Rooster" unique_id=1150321328]
+
+[node name="Sheep" type="CharacterBody2D" parent="." unique_id=1776450639]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sheep" unique_id=1369152907]
+shape = SubResource("RectangleShape2D_eujkc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sheep" unique_id=217646148]
+position = Vector2(-139, 204)
+texture = ExtResource("2_msdv5")
+
+[node name="Camera2D" type="Camera2D" parent="Sheep" unique_id=240886577]

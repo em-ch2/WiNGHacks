@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://cxdrgo3qqxu46"]
 
-[ext_resource type="Texture2D" uid="uid://dart2p65vsekc" path="res://assets/rooster-removebg-preview.png" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://dart2p65vsekc" path="res://assets/rooster-removebg-preview.png" id="1_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://d1q6x2m0vmgxl" path="res://scenes/rooster_sheep_scene.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://objlhjv64q2p" path="res://scenes/pig_scene.tscn" id="3_71j4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
 
 [node name="world" type="Node2D" unique_id=283676793]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1423312500]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=924810635]
 shape = SubResource("RectangleShape2D_fj7yv")
@@ -15,4 +18,9 @@ shape = SubResource("RectangleShape2D_fj7yv")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1646724806]
 position = Vector2(450, 209)
-texture = ExtResource("1_f3sb7")
+texture = ExtResource("1_4wyf3")
+
+[node name="PigScene" parent="." unique_id=1633393673 instance=ExtResource("3_71j4m")]
+
+[node name="RoosterSheep" parent="." unique_id=1378423046 instance=ExtResource("3_4wyf3")]
+position = Vector2(-270, 0)

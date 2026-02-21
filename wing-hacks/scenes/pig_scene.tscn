@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://objlhjv64q2p"]
+
+[ext_resource type="Texture2D" uid="uid://00ua18qpjwdx" path="res://assets/pig-removebg-preview.png" id="1_5lvby"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5xwi"]
+
+[node name="PigScene" type="Node2D" unique_id=1378423046]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1369932556]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1177469065]
+shape = SubResource("RectangleShape2D_p5xwi")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1863379428]
+position = Vector2(133, 206)
+texture = ExtResource("1_5lvby")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1150321328]
