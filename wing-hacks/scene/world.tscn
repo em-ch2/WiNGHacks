@@ -4,12 +4,12 @@
 [ext_resource type="Script" uid="uid://bu8bb885ev1w7" path="res://scripts/scene_1.gd" id="1_na5tu"]
 [ext_resource type="AudioStream" uid="uid://ggp60pyoxb46" path="res://assets/Lotus Pond - Loop.wav" id="2_a0bac"]
 [ext_resource type="AudioStream" uid="uid://du13safyrajhb" path="res://assets/Dragon Dance - Loop.wav" id="3_tmyho"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://dart2p65vsekc" path="res://assets/rooster-removebg-preview.png" id="4_hnm4a"]
+=======
+>>>>>>> d7f75ab595782bfcf173681fa64f7d9c94bd29b0
 [ext_resource type="Script" uid="uid://m5dv7im0xyup" path="res://scripts/transition.gd" id="4_jsnws"]
 [ext_resource type="PackedScene" uid="uid://b3vwcxm4qb2u2" path="res://scene/player.tscn" id="7_a0bac"]
-[ext_resource type="Texture2D" uid="uid://l35lga0ebo5o" path="res://assets/sheep-removebg-preview.png" id="7_ol7uo"]
-[ext_resource type="Texture2D" uid="uid://00ua18qpjwdx" path="res://assets/pig-removebg-preview.png" id="8_a7xoa"]
-[ext_resource type="Texture2D" uid="uid://dfhggeo6g872f" path="res://assets/rat.png" id="9_vme25"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ghph"]
 texture = ExtResource("1_bqa5m")
@@ -596,8 +596,6 @@ sources/0 = SubResource("TileSetAtlasSource_7ghph")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsnws"]
 size = Vector2(128.75, 108.9375)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
-
 [node name="Main" type="Node2D" unique_id=283676793]
 
 [node name="Scene 1" type="Node" parent="." unique_id=1697337129]
@@ -642,52 +640,5 @@ stream = ExtResource("2_a0bac")
 
 [node name="dragon" type="AudioStreamPlayer" parent="." unique_id=918754134]
 stream = ExtResource("3_tmyho")
-
-[node name="rooster" type="CharacterBody2D" parent="." unique_id=1423312500]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rooster" unique_id=924810635]
-shape = SubResource("RectangleShape2D_fj7yv")
-
-[node name="Sprite2D" type="Sprite2D" parent="rooster" unique_id=1646724806]
-position = Vector2(450, 209)
-texture = ExtResource("4_hnm4a")
-
-[node name="sheep" type="CharacterBody2D" parent="." unique_id=624848535]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sheep" unique_id=783599564]
-shape = SubResource("RectangleShape2D_fj7yv")
-
-[node name="Sprite2D" type="Sprite2D" parent="sheep" unique_id=586129588]
-position = Vector2(-631, 30)
-scale = Vector2(3, 3)
-texture = ExtResource("7_ol7uo")
-
-[node name="pig" type="CharacterBody2D" parent="." unique_id=116592525]
-visible = false
-position = Vector2(-518, 45.000015)
-scale = Vector2(3, 3)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pig" unique_id=1550612067]
-shape = SubResource("RectangleShape2D_fj7yv")
-
-[node name="Sprite2D" type="Sprite2D" parent="pig" unique_id=1249253395]
-position = Vector2(-291.33334, -13.000005)
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("8_a7xoa")
-
-[node name="rat" type="CharacterBody2D" parent="." unique_id=388902565]
-visible = false
-position = Vector2(-518, 45.000015)
-scale = Vector2(3, 3)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rat" unique_id=1165703747]
-shape = SubResource("RectangleShape2D_fj7yv")
-
-[node name="Sprite2D" type="Sprite2D" parent="rat" unique_id=607224399]
-position = Vector2(-523.3334, 61.333344)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_vme25")
 
 [connection signal="body_entered" from="Scene 1/Area2D" to="Scene 1" method="_on_area_2d_body_entered"]

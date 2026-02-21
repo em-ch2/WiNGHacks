@@ -1,11 +1,11 @@
 ~ start
-Dog: Bark.
+Horse: Neigh.
 ~ main_menu
 - Who are you?
-	Dog: I am a dog.
+	Horse: I am a horse.
 	=> main_menu
 - Please give me your wisdom.
-	Dog: If you make me some of your dumplings, I will tell you.
+	Horse: Food feeds the brain. May I try some of your dumplings?
 	=> main_menu
 - Make dumplings => start
 - Exit => END

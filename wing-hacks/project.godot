@@ -18,7 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+<<<<<<< HEAD
 Global="*uid://dcu2lstqi2pec"
+=======
+GameManager="*uid://cla4nrvp7i5v7"
+>>>>>>> d7f75ab595782bfcf173681fa64f7d9c94bd29b0
 
 [editor_plugins]
 
@@ -54,7 +58,12 @@ interact={
 
 [internationalization]
 
+<<<<<<< HEAD
 locale/translations_pot_files=PackedStringArray("res://dialogue/dog.dialogue", "res://rooster.dialogue")
+=======
+locale/translations_pot_files=PackedStringArray("res://dialogue/dog.dialogue", "res://dialogue/horse.dialogue", "res://dialogue/rat_dialogue.dialogue")
+<<<<<<<HEADlocale/translations_pot_files=PackedStringArray("res://dialogue/dog.dialogue", "res://dialogue/horse.dialogue")
+>>>>>>> d7f75ab595782bfcf173681fa64f7d9c94bd29b0
 
 [physics]
 
