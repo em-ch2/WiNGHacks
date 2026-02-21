@@ -1,0 +1,7 @@
+~ start
+
+Rat: Sup
+Rat: I want these ingredients.
+Rat: {{GameManager.get_ingredients()}}
+
+=> END
