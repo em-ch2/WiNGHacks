@@ -133,6 +133,7 @@ sprite_frames = SubResource("SpriteFrames_ihjo1")
 animation = &"player_idle"
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1463928879]
-zoom = Vector2(0.2, 0.2)
+zoom = Vector2(2, 3)
 process_callback = 0
+position_smoothing_enabled = true
 editor_draw_limits = true

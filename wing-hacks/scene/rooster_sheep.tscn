@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cmpcj84j2dtws"]
 
-[ext_resource type="Script" uid="uid://bu8bb885ev1w7" path="res://scripts/scene_1.gd" id="1_ya0cb"]
+[ext_resource type="Script" uid="uid://bjxnhrpukls48" path="res://scripts/scene_2.gd" id="1_ya0cb"]
 [ext_resource type="Texture2D" uid="uid://cieeklh7d6cw5" path="res://assets/winghacks_world.png" id="2_4bxd2"]
 [ext_resource type="PackedScene" uid="uid://b3vwcxm4qb2u2" path="res://scene/player.tscn" id="3_0sxsr"]
 
