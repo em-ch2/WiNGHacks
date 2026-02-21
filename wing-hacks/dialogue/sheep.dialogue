@@ -1,3 +1,42 @@
 ~ start
+<<<<<<< HEAD
 Sheep: Bleat
+=======
+if Global.offered_dumplings == true
+	if Global.minigame_success == true
+		Sheep: Thank you for the food!
+	else:
+		Sheep: It wasn't what I was looking for...
+	set Global.offered_dumplings = false
+	=> END
+
+Sheep: Hello, you are?
+Sheep: Ah, Rooster sent you over. You sell dumplings to the Jade Emperor don't you?
+Sheep: Dumpling making is a delicate process that requires great patience. You must have learned a lot from your family. Though, you seem downward. What's wrong?
+
+~ main_menu
+- Is the Jade Emperor a fan of my family's dumplings?
+	Sheep: Is that the reason? I'm sure the Jade Emperor favors your dumplings more than any other.
+	=> main_menu
+- I'm just questioning some things.
+	Sheep: I can offer an ear if you want to talk about your troubles.
+	=> sub_menu
+- Offer dumplings
+	Sheep: Oh thank you! I will have {{GameManager.get_ingredients()}} dumplings please.
+	set Global.offered_dumplings = true
+	do Global.start_dumplings_minigame()
+	=> END
+- Walk away
+if [Global.offered_dumplings == false]
+	Sheep: Oh, see you another time.
+	=> END
+	
+~ sub_menu
+- I suppose I’m questioning my destiny. I grew up making dumplings and being told that I will one day take over my family business. My only hobbies are making dumplings and seasoning the meat for the dumplings. Will this truly be my life for the next 500 years?
+	Sheep: Oh! I'm so sorry :'(
+	Sheep: I have never been the best at making decisions and often rely on others. During the Great Zodiac Race, I had only made it due to Rooster and Monkey’s help in making a raft that carried us over. Perhaps finding a companion to accompany you throughout the next 500 years will help. I’m truly sorry I could not offer much advice as destiny is a tricky thing that even us Zodiac animals do not fully understand. I’m sure the other animals can offer their own perspective. Have you talked to Rooster yet?
+	=> main_menu
+- Back
+	=> main_menu
+>>>>>>> 03c5f2c05bee431c0d1b1047781935125dede74f
 => END

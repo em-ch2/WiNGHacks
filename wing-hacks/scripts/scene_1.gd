@@ -30,8 +30,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		# Change this line to point to 'transitions', NOT 'ColorRect'
-		var transition = get_node("transitions") 
+		var transition = get_node("transitions")
 		transition.fade_out(Callable(self, "_change_scene"))
 		
 func _change_scene():

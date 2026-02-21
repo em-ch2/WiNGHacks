@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b065cumucdkw8" path="res://assets/mc_idle_sprites_right-removebg-preview.png" id="5_2fvbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml7e8"]
+size = Vector2(986, 1201)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fb6u6"]
 atlas = ExtResource("2_oh5ij")
@@ -120,10 +121,11 @@ animations = [{
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=664246344]
 position = Vector2(-2, 0)
+collision_mask = 0
 script = ExtResource("1_s4jxa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=1866987049]
-position = Vector2(2, 0)
+position = Vector2(-1739, 557)
 shape = SubResource("RectangleShape2D_ml7e8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=1776882574]

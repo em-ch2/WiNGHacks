@@ -1,3 +1,39 @@
 ~ start
+<<<<<<< HEAD
 Pig: oink
+=======
+if Global.offered_dumplings == true
+	if Global.minigame_success == true
+		Pig: Well I guess all those years of practice paid off!
+	else:
+		Pig: How can this be even worse than I imagined?
+	set Global.offered_dumplings = false
+	=> END
+
+Pig: Zzzzzzz....
+Pig: Huh? Who are you?
+Pig: The new dumpling merchant? The Jade Emperor never lets me eat the dumplings he orders. He says that I always finish it all and leave none of him! Hmph, it does not matter. I’m rich enough to order my own. Now, why have you woken me from my 29-hour nap?
+
+~ main_menu
+- I'm seeking life advice.
+	Pig: Life advice? I do not care about the difficulties of life and much rather enjoy the pleasures life can provide. Shall I give you financial advice for your family’s dumpling business?
+	=> sub_menu
+- Offer dumplings
+	Pig: Don't mind if I do! I'll have 777 {{GameManager.get_ingredients()}} dumplings please.
+	set Global.offered_dumplings = true
+	do Global.start_dumplings_minigame()
+	=> END
+- Walk away
+if [Global.offered_dumplings == false]
+	Pig: Well, time for me to go back to sleep.
+	=> END
+	
+~ sub_menu
+- I was told the Zodiac animals can offer some valuable perspective on my situation. I’m not sure what my path in life is anymore. It has always been taking over the family business but now…
+	Pig: Life does not need to be so complicated. If you like it, then you like it. If not, then stop doing it! I firmly believe life should be lived simply. No need to stress over the difficulties, and instead focus on the positives. 
+	Pig: Don't be so stubborn! Well I’m too lazy to change your mind. If you truly want to continue seeking advice then I suggest finding the Horse. There’s no one more headstrong than the Horse. I’m sure he can out-stubborn your 500 year old mindset!
+	=> main_menu
+- Back
+	=> main_menu
+>>>>>>> 03c5f2c05bee431c0d1b1047781935125dede74f
 => END
