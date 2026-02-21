@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://42daa7vgtl1j"
+path="res://.godot/imported/horse.dialogue-3387b0618d315f5e0262640ac63846f2.tres"
+
+[deps]
+
+source_file="res://dialogue/horse.dialogue"
+dest_files=["res://.godot/imported/horse.dialogue-3387b0618d315f5e0262640ac63846f2.tres"]
+
+[params]
+
+defaults=true
