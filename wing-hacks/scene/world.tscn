@@ -613,7 +613,7 @@ tile_map_data = PackedByteArray("AADh//T/AAAAAAAAAADh//X/AAAAAAEAAADh//b/AAAAAAI
 tile_set = SubResource("TileSet_7h02s")
 
 [node name="Player" parent="Scene 1" unique_id=1048355173 instance=ExtResource("7_a0bac")]
-position = Vector2(-347, 18)
+position = Vector2(-347, 8)
 scale = Vector2(0.05, 0.05)
 
 [node name="collisions" type="StaticBody2D" parent="Scene 1" unique_id=396174164]

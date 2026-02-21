@@ -4,4 +4,14 @@ Rat: Sup
 Rat: I want these ingredients.
 Rat: {{GameManager.get_ingredients()}}
 
+~ main_menu 
+- Okay. How do you pay
+	Rat: I won't
+	=> main_menu
+- Give me advice first.
+	Rat: Just cheat dude.
+	=> main_menu
+- Make dumplings => start
+- Exit => END
+
 => END

@@ -1,0 +1,17 @@
+~ start
+
+Cat: I HATE YOU
+Cat: I want these ingredients.
+Cat: {{GameManager.get_ingredients()}}
+
+~ main_menu 
+- Okay. How do you pay.
+	Rat: I'm poor.
+	=> main_menu
+- Give me advice first.
+	Rat: Never trust anyone.
+	=> main_menu
+- Make dumplings => start
+- Exit => END
+
+=> END

@@ -1,0 +1,11 @@
+~start
+Rat: I want these ingredients.
+Rat: {{GameManager.get_ingredients()}}
+
+~main_menu
+-Okay. How do you pay
+-Give me advice first.
+-Make dumplings
+-Exit => END
+
+=> END
