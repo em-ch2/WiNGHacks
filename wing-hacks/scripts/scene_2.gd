@@ -17,6 +17,11 @@ func _ready() -> void:
 	camera.limit_top = map_pixel_position.y
 	camera.limit_right = map_pixel_position.x + map_pixel_size.x
 	camera.limit_bottom = map_pixel_position.y + map_pixel_size.y
+	
+	if Global.offered_dumplings and Global.player_start_posx != 0:
+		$Player.global_position = Vector2(Global.player_start_posx, Global.player_start_posy)
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/rooster.dialogue"), "start")
+	
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
