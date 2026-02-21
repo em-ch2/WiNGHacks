@@ -1,0 +1,19 @@
+~ start
+Rooster: Are you the new merchant?
+Rooster: I heard that you sell dumplings to the Jade Emperor.
+Rooster: A tradition over 500 years old! How persistent. Is there anything you'd like to ask me?
+
+~ main_menu
+- Is the Jade Emperor a fan of my family's dumplings?
+	Rooster: Why yes. Why else would he continually purchase from your family all these years?
+- What if I don't want to go down this path for my entire life?
+	Rooster: I'd recommend that you talk to some of the other animals first. But I hope you have the courage to pursue your dreams. 
+- Offer dumplings
+	Rooster: Well, I'm sure this can be good practice for you to see if you actually like it or not.
+	set Global.offered_dumplings = true
+	do Global.start_dumplings_minigame()
+	=> END
+- Walk away
+	[if Global.offered_dumplings == false] 
+	Rooster: I thought you had something more to say?
+=> END
