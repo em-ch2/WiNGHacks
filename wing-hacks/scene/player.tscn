@@ -121,10 +121,11 @@ animations = [{
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=664246344]
 position = Vector2(-2, 0)
+collision_mask = 0
 script = ExtResource("1_s4jxa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=1866987049]
-position = Vector2(2246, 472)
+position = Vector2(-1739, 557)
 shape = SubResource("RectangleShape2D_ml7e8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=1776882574]

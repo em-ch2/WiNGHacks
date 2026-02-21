@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 		last_dir = "up"
 	if Input.is_action_pressed("player_idle"):
 		anim.play("player_idle")
-		last_dir = "down"
+		last_dir = "down" 
 	
 	velocity = dir.normalized() * SPEED
 	move_and_slide()
