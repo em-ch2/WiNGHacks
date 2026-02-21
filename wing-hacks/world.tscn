@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cxdrgo3qqxu46"]
+
+[ext_resource type="Texture2D" uid="uid://bpxcmgupwomkq" path="res://assets/chicken-removebg-preview.png" id="1_f3sb7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
+
+[node name="world" type="Node2D" unique_id=283676793]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1423312500]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=924810635]
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1024742381]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1646724806]
+position = Vector2(487, 215)
+texture = ExtResource("1_f3sb7")
