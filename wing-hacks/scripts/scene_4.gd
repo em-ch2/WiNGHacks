@@ -27,5 +27,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		transition.fade_out(Callable(self, "_change_scene"))
 		
 func _change_scene():
-	get_tree().call_deferred("change_scene_to_file", "res://scene/pig.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scene/rat.tscn")
 		
