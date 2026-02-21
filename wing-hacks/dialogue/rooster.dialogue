@@ -1,44 +1,47 @@
 ~ start
-<<<<<<< HEAD
-Rooster: Hello
-=======
 if Global.offered_dumplings == true
 	if Global.minigame_success == true
-		Rooster: This was delicious! What a wonderful taste of 500 year old heritage.
+		Rooster: Thank you for the food!
 	else:
-		Rooster: This was not what I had asked for.
+		Rooster: It wasn't what I was looking for...
 	set Global.offered_dumplings = false
 	=> END
 
 Rooster: Are you the new merchant?
-Rooster: I heard that your family sells dumplings to the Jade Emperor.
-Rooster: A tradition over 500 years old! How persistent, you must be dedicated to your family heritage. Is there anything you'd like to ask me?
+Rooster: I heard that you sell dumplings to the Jade Emperor.
+Rooster: A tradition over 500 years old! How persistent, you must be really dedicated to your family heritage. Is there anything you'd like to ask me?
 
 ~ main_menu
 - Is the Jade Emperor a fan of my family's dumplings?
 	Rooster: Why yes. Why else would he continually purchase from your family all these years?
 	=> main_menu
-- I was hoping to get some advice
-	Rooster: Oh? Of course, I'm the Rooster that strategically built the raft and finished 10th in the Great Zodiac Race. I offer great advice to those uncertain about themselves. What do you need help with?
+- Well actually…I was wondering if you can offer some advice.
+	Rooster: Oh? Of course! I’m the Rooster that strategically built the raft and finished 10th in the Great Zodiac Race after all. I offer great advice. What would you need help with?
 	=> sub_menu
 - Offer dumplings
-	Rooster: Let's see how good they are! I would like {{GameManager.get_ingredients()}} dumplings.
+	Rooster: Thank you! I will have {{GameManager.get_ingredients()}} dumplings please.
 	set Global.offered_dumplings = true
 	do Global.start_dumplings_minigame()
 	=> END
 - Walk away
-if [Global.offered_dumplings == false]
-	Rooster: I thought you had something more to say?
+	=> END
+	if [Global.offered_dumplings == false]
+		Rooster: I thought you had something more to say?
 	=> END
 	
 ~ sub_menu
-- I'm wondering if this is truly my destined path in life.
-	Rooster: Destiny is a mysterious thing. I'd recommend talking to other animals to gain more insight.
-	=> main_menu
-- How can I improve my dumpling-making skills?
-	Rooster: Practice makes perfect! Start small and gradually refine your technique.
-	=> main_menu
+- I’m wondering if this is truly my destined path in life. I have never thought of leaving my family business...
+	=> RoosterAdvice
+- ...But now I can't help but become...lifeless. Does my life have any meaning beyond dumplings?
+	=> RoosterAdvice
 - Back
 	=> main_menu
->>>>>>> 03c5f2c05bee431c0d1b1047781935125dede74f
+	
+~ RoosterAdvice
+Rooster: Rooster: I see. Destiny is truly a mysterious thing. I have always followed destiny and only deviated by strategizing the best path to my destiny. 
+Rooster: Unfortunately, I am unable to tell you what your destiny should be. However, my wisdom has always come from working with others. 
+Rooster: I'd recommend that you talk to some of the other animals to gain some insight. Perhaps one will give you the answer you seek. 
+Rooster: Have you talked to Sheep yet?
+=> main_menu
+
 => END

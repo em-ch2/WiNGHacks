@@ -1,12 +1,39 @@
 ~ start
-Dog: Bark.
+if Global.offered_dumplings == true
+	if Global.minigame_success == true
+		Rooster: Thank you for the food!
+	else:
+		Rooster: It wasn't what I was looking for...
+	set Global.offered_dumplings = false
+	=> END
+	
+Dog: Woof!
+- ?
+Dog: I smell dumplings in that basket of yours! So you’re the new merchant! Your family always sneaks some dumplings to me when they come to sell. 
+Dog: Oh you’re looking for the Horse? Sorry I’ve been distracted playing in the fields all day, I haven’t seen them!
+Dog: But hey, I will love to help you with whatever you’re having trouble with instead!!
+
 ~ main_menu
-- Who are you?
-	Dog: I am a dog.
+- What were you distracted by?
+	Dog: I was chasing the butterflies around the river! They reminded me of the time during the Great Zodiac Race where I chased all the nearby animals around and forgot I was in a race.
+	Dog: I ended up 11th right before the Dozing Pig haha!
 	=> main_menu
-- Please give me your wisdom.
-	Dog: If you make me some of your dumplings, I will tell you.
+- I was just questioning duty vs freedom I suppose…
+	Dog: Well duty is very important, but so is having fun! I never forget to carry out the Jade Emperor’s orders even when they are tedious and I still make sure to have fun like what I’m doing right now.
+	- How do you find out what you like? I never tried anything except for making dumplings…
+	Dog: I’m not sure. I just follow my instincts! If I see a fun-looking stick, I’ll stop and play. If a fish is swimming fast, I’ll swim with it! I like all these things because of my instincts. 
+	Dog: Maybe you should follow yours?
+	- I don’t know what my instincts are telling me. The family legacy has been engraved in me for too long.
+	Dog: If you talk to more of us I’m sure you’ll know at the end. Hey, I’ll find the Horse with you! The Horse is so independent, I’m sure they’ll be able to help you decide. 
+	Dog: Just give a second and I’ll–WOAH!! There’s a bird!
 	=> main_menu
-- Make dumplings => start
-- Exit => END
+- Offer dumplings
+	Dog: WOAH! I will have {{GameManager.get_ingredients()}} dumplings please.
+	set Global.offered_dumplings = true
+	do Global.start_dumplings_minigame()
+	=> END
+- Walk away
+	if [Global.offered_dumplings == false]
+		Dog: Aww, you don’t want to talk to me?
+	=> END
 => END

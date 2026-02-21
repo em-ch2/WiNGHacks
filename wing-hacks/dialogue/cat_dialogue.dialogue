@@ -1,17 +1,50 @@
 ~ start
 
-Cat: I HATE YOU
-Cat: I want these ingredients.
-Cat: {{GameManager.get_ingredients()}}
+if Global.offered_dumplings == true
+	if Global.minigame_success == true
+		Pig: Well I guess all those years of practice paid off!
+	else:
+		Pig: How can this be even worse than I imagined?
+	set Global.offered_dumplings = false
+	=> END
 
-~ main_menu 
-- Okay. How do you pay.
-	Rat: I'm poor.
-	=> main_menu
-- Give me advice first.
-	Rat: Never trust anyone.
-	=> main_menu
-- Make dumplings => start
-- Exit => END
+Cat: Who are you?
+Cat: You…You smell like the Rat! How dare you come near me!
 
+~ main_menu
+- I don't mean no harm. I’m just looking for the Horse.
+	Cat: The Horse? I saw them run ahead...If you have no other business, then quickly leave. 
+	Cat: I have no desire to smell more of the Rat than I need to. Not after they…Nevermind. Just leave!
+	=> main_menu
+- What is your issue with the Rat?
+	Cat: My issue? Do you know why Rat even won the race? Resourcefulness? Adaptiveness? No! 
+	Cat: It’s because they tricked me, promising to wake me up for the race, but forgot about me! 
+	Cat: We were best friends…I’m sure the Rat knew that there wasn't enough space for all of us and one of us had to go…
+	
+	- I'm sorry
+	
+	Cat: Whatever. It’s been thousands of years. Did you see the Rat before coming here?
+	
+	- Yes, I was asking for advice. Rat told me to hire resources to help me manage my family business, so that I can explore my life...
+	- ...but I’m not sure if I can trust them…
+	
+	Cat: ...
+	Cat: Sigh…You probably expected me to say don’t trust them. Then, you’ll agree and go back to your family business right?
+	Cat: I hate to admit this but…don’t let fear or hate guide you. I’ve been hateful for too long and I’m sure a deep part of you holds resentment for the past 500-years of constant pressure. 
+	Cat: Sometimes…sometimes it’s time to let go and move on. The only one you’re harming for being hateful is yourself. 
+	Cat: Just look at me, all alone and so far away from the Palace...
+	
+	- I think Rat was looking for you nearby. They seemed sorrowful.
+	Cat:..Just leave. The Horse should be ahead.
+	=> main_menu
+
+- Offer dumplings
+	Cat: ...Thanks. I’ll have {{GameManager.get_ingredients()}} dumplings please.
+	set Global.offered_dumplings = true
+	do Global.start_dumplings_minigame()
+	=> END
+- Walk away
+	if [Global.offered_dumplings == false]
+		Cat: Typical...
+	=> END
 => END

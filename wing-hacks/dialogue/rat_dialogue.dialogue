@@ -1,17 +1,49 @@
 ~ start
+if Global.offered_dumplings == true
+	if Global.minigame_success == true
+		Rooster: Thank you for the food!
+	else:
+		Rooster: It wasn't what I was looking for...
+	set Global.offered_dumplings = false
+	=> END
+	
+Rat: Psst, is that dumplings in your basket? How about a deal?
+Rat: I will give you $2 for a dozen dumplings for now and pay you double after Chinese New Year ;). 
+Rat: What that sounds like a scam? Of course it isn’t! How dare you accuse me of scamming!. 
+Rat: Fine, I’ll pay the regular price for the dumplings, but you have to give me a discount for the disrespect!
+Rat: Rat: Oh it’s for the Jade Emperor? Why didn’t you say so then. 
+Rat: You’re walking further away from the Palace though. What are you looking for?
 
-Rat: Sup
-Rat: I want these ingredients.
-Rat: {{GameManager.get_ingredients()}}
-
-~ main_menu 
-- Okay. How do you pay
-	Rat: I won't
+~ main_menu
+- Have you seen the Horse?
+	Rat: The Horse? The Horse often runs through Heaven so they can be anywhere!
+	- ...
+	Rat: Hm? Don’t look so downward. There’s always a solution to a problem. Tell me and I’ll help you, no tricks this time!
+	- What would you do if you had to choose between family legacy and self-identity?
+	Rat: Well what resources do you have around you? Any relatives or friends that can help you in the business? 
+	Rat: What about doing part-time? You have to be resourceful and adapt well in order to grow. 
+	Rat: I bet you haven’t changed at all from 500 years ago!
+	- I suppose I never considered what I could do to navigate my problem…Rooster and Sheep mentioned finding help as well...
+	- ...But can I really trust them with my family business? 500 years of lineage lies on me.
+	Rat: Trust? All you have to do is trust my advice! I won the Great Zodiac Race by using the animals around me, you know!
+	- I’ll keep your advice in mind.
+	Rat: Well, keep going and I’m sure you’ll find the Horse. But you are getting further away from the Palace so you might meet...
+	- ?
+	Rat: Nevermind. Just-I had to do what I had to do to win the race, okay? I’m small and slow, there’s no way I could’ve won the race otherwise.
+	Rat: I really didn't mean to!
 	=> main_menu
-- Give me advice first.
-	Rat: Just cheat dude.
+- You’re looking a bit suspicious.
+	Rat: Suspicious? I’m not suspicious! I’m definitely not looking for the C-anything! 
+	Rat: I’m just a bit further from the Palace because I got bored that’s all. 
+	Rat:...Say, do you have any advice in asking for forgiveness for a millennium-year-old feud…
 	=> main_menu
-- Make dumplings => start
-- Exit => END
-
+- Offer dumplings
+	Rat: Is this free? If so, {{GameManager.get_ingredients()}} dumplings please.
+	set Global.offered_dumplings = true
+	do Global.start_dumplings_minigame()
+	=> END
+- Walk away
+	if [Global.offered_dumplings == false]
+		Rat: So rude!
+	=> END
 => END

@@ -1,7 +1,7 @@
 ~ start
-<<<<<<< HEAD
+
 Sheep: Bleat
-=======
+
 if Global.offered_dumplings == true
 	if Global.minigame_success == true
 		Sheep: Thank you for the food!
@@ -11,7 +11,7 @@ if Global.offered_dumplings == true
 	=> END
 
 Sheep: Hello, you are?
-Sheep: Ah, Rooster sent you over. You sell dumplings to the Jade Emperor don't you?
+Sheep: Ah, the new merchant. You sell dumplings to the Jade Emperor don't you?
 Sheep: Dumpling making is a delicate process that requires great patience. You must have learned a lot from your family. Though, you seem downward. What's wrong?
 
 ~ main_menu
@@ -27,16 +27,26 @@ Sheep: Dumpling making is a delicate process that requires great patience. You m
 	do Global.start_dumplings_minigame()
 	=> END
 - Walk away
-if [Global.offered_dumplings == false]
-	Sheep: Oh, see you another time.
+	if [Global.offered_dumplings == false]
+		Sheep: Oh, see you another time.
 	=> END
 	
 ~ sub_menu
-- I suppose I’m questioning my destiny. I grew up making dumplings and being told that I will one day take over my family business. My only hobbies are making dumplings and seasoning the meat for the dumplings. Will this truly be my life for the next 500 years?
-	Sheep: Oh! I'm so sorry :'(
-	Sheep: I have never been the best at making decisions and often rely on others. During the Great Zodiac Race, I had only made it due to Rooster and Monkey’s help in making a raft that carried us over. Perhaps finding a companion to accompany you throughout the next 500 years will help. I’m truly sorry I could not offer much advice as destiny is a tricky thing that even us Zodiac animals do not fully understand. I’m sure the other animals can offer their own perspective. Have you talked to Rooster yet?
-	=> main_menu
+- I suppose I’m questioning my destiny. My only hobbies are making dumplings and seasoning the meat for the dumplings... 
+	=> SheepAdvice
+- ...Will this truly be my life for the next 500 years?
+	=> SheepAdvice
 - Back
 	=> main_menu
->>>>>>> 03c5f2c05bee431c0d1b1047781935125dede74f
+	
+~ SheepAdvice
+Sheep: Oh! I'm so sorry :'(
+Sheep: I have never been the best at making decisions and often rely on others. 
+	During the Great Zodiac Race, I had only made it due to Rooster and Monkey’s help in making a raft that carried us over. 
+	Perhaps finding a companion to accompany you throughout the next 500 years will help. 
+	I’m truly sorry I could not offer much advice as destiny is a tricky thing that even us Zodiac animals do not fully understand. 
+	I’m sure the other animals can offer their own perspective. Have you talked to Rooster yet?
+
+=> main_menu
+
 => END
