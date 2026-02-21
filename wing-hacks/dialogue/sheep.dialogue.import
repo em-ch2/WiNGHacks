@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cyhl234k3mdir"
+path="res://.godot/imported/sheep.dialogue-5f77ed21d9c21482224ecc9ebecabd96.tres"
+
+[deps]
+
+source_file="res://dialogue/sheep.dialogue"
+dest_files=["res://.godot/imported/sheep.dialogue-5f77ed21d9c21482224ecc9ebecabd96.tres"]
+
+[params]
+
+defaults=true

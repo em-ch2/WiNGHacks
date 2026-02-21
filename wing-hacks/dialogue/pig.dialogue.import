@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bw80d4l7ps8co"
+path="res://.godot/imported/pig.dialogue-714ac1af061e8b3bf2d82dbb9d9339bc.tres"
+
+[deps]
+
+source_file="res://dialogue/pig.dialogue"
+dest_files=["res://.godot/imported/pig.dialogue-714ac1af061e8b3bf2d82dbb9d9339bc.tres"]
+
+[params]
+
+defaults=true
