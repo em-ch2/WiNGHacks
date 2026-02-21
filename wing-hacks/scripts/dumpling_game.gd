@@ -37,7 +37,7 @@ func _on_shrimp_btn_pressed() -> void:
 	update_dumpling_appearance()
 	play_tap_effect()
 
-func _on_soy_sauce_pressed() -> void:
+func _on_soy_sauce_2_pressed() -> void:
 	has_soy = true
 	update_dumpling_appearance()
 	play_tap_effect()
@@ -79,7 +79,3 @@ func complete_minigame() -> void:
 	await get_tree().create_timer(1.5).timeout
 	Global.offered_dumplings = true
 	get_tree().change_scene_to_file("res://scene/rooster_sheep.tscn")
-
-
-func _on_soy_sauce_2_pressed() -> void:
-	pass # Replace with function body.
