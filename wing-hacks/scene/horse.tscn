@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://v3m3cb1ydbdy"]
 
 [ext_resource type="Script" uid="uid://dkuwk232fhe0t" path="res://scripts/scene_7.gd" id="1_35q7m"]
-[ext_resource type="Script" path="res://scripts/transition.gd" id="2_soy0r"]
+[ext_resource type="Script" uid="uid://m5dv7im0xyup" path="res://scripts/transition.gd" id="2_soy0r"]
 [ext_resource type="Texture2D" uid="uid://bacdsgorrs4iu" path="res://assets/Screenshot 2026-02-21 113341.png" id="4_olieo"]
 [ext_resource type="PackedScene" uid="uid://b3vwcxm4qb2u2" path="res://scene/player.tscn" id="4_r8qao"]
 [ext_resource type="Texture2D" uid="uid://dwp7smi6a4ys4" path="res://assets/horse.png" id="5_soy0r"]
