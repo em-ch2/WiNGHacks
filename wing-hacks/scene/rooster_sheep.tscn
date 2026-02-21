@@ -600,7 +600,7 @@ tile_map_data = PackedByteArray("AAAgAPT/AAAAAAAAAAAgAPX/AAAAAAEAAAAgAPb/AAAAAAI
 tile_set = SubResource("TileSet_gbf1e")
 
 [node name="Player" parent="Scene 2" unique_id=1048355173 instance=ExtResource("3_0sxsr")]
-position = Vector2(633, 28.999992)
+position = Vector2(629, 37.999996)
 scale = Vector2(0.05, 0.05)
 
 [node name="Area2D" type="Area2D" parent="Scene 2" unique_id=1481381887]

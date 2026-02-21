@@ -27,5 +27,10 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		get_tree().change_scene_to_file("res://scene/rooster_sheep.tscn")
+		# Change this line to point to 'transitions', NOT 'ColorRect'
+		var transition = get_node("transitions") 
+		transition.fade_out(Callable(self, "_change_scene"))
+		
+func _change_scene():
+	get_tree().call_deferred("change_scene_to_file", "res://scene/rooster_sheep.tscn")
 		
