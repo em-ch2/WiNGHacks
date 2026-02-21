@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://l35lga0ebo5o" path="res://assets/sheep-removebg-preview.png" id="6_bn416"]
 [ext_resource type="Script" uid="uid://d2xpvnidxaghh" path="res://scripts/rooster.gd" id="6_gbf1e"]
 [ext_resource type="Resource" uid="uid://bk0tbesacv1iq" path="res://dialogue/rooster.dialogue" id="6_n12nn"]
-[ext_resource type="Script" uid="uid://cpdyfgsjahy5j" path="res://scripts/sheep.gd" id="8_k34y6"]
+[ext_resource type="Script" path="res://scripts/sheep.gd" id="8_k34y6"]
 [ext_resource type="Resource" uid="uid://cyhl234k3mdir" path="res://dialogue/sheep.dialogue" id="9_w0d2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbf1e"]

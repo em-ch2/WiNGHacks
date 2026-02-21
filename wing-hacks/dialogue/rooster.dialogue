@@ -1,3 +1,40 @@
 ~ start
-Rooster: Hello
+if Global.offered_dumplings == true
+	if Global.minigame_success == true
+		Rooster: This was delicious! What a wonderful taste of 500 year old heritage.
+	else:
+		Rooster: This was not what I had asked for.
+	set Global.offered_dumplings = false
+	=> END
+
+Rooster: Are you the new merchant?
+Rooster: I heard that your family sells dumplings to the Jade Emperor.
+Rooster: A tradition over 500 years old! How persistent, you must be dedicated to your family heritage. Is there anything you'd like to ask me?
+
+~ main_menu
+- Is the Jade Emperor a fan of my family's dumplings?
+	Rooster: Why yes. Why else would he continually purchase from your family all these years?
+	=> main_menu
+- I was hoping to get some advice
+	Rooster: Oh? Of course, I'm the Rooster that strategically built the raft and finished 10th in the Great Zodiac Race. I offer great advice to those uncertain about themselves. What do you need help with?
+	=> sub_menu
+- Offer dumplings
+	Rooster: Let's see how good they are! I would like {{GameManager.get_ingredients()}} dumplings.
+	set Global.offered_dumplings = true
+	do Global.start_dumplings_minigame()
+	=> END
+- Walk away
+if [Global.offered_dumplings == false]
+	Rooster: I thought you had something more to say?
+	=> END
+	
+~ sub_menu
+- I'm wondering if this is truly my destined path in life.
+	Rooster: Destiny is a mysterious thing. I'd recommend talking to other animals to gain more insight.
+	=> main_menu
+- How can I improve my dumpling-making skills?
+	Rooster: Practice makes perfect! Start small and gradually refine your technique.
+	=> main_menu
+- Back
+	=> main_menu
 => END
