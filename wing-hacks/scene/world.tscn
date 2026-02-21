@@ -4,10 +4,7 @@
 [ext_resource type="Script" uid="uid://bu8bb885ev1w7" path="res://scripts/scene_1.gd" id="1_na5tu"]
 [ext_resource type="AudioStream" uid="uid://ggp60pyoxb46" path="res://assets/Lotus Pond - Loop.wav" id="2_a0bac"]
 [ext_resource type="AudioStream" uid="uid://du13safyrajhb" path="res://assets/Dragon Dance - Loop.wav" id="3_tmyho"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://dart2p65vsekc" path="res://assets/rooster-removebg-preview.png" id="4_hnm4a"]
-=======
->>>>>>> d7f75ab595782bfcf173681fa64f7d9c94bd29b0
 [ext_resource type="Script" uid="uid://m5dv7im0xyup" path="res://scripts/transition.gd" id="4_jsnws"]
 [ext_resource type="PackedScene" uid="uid://b3vwcxm4qb2u2" path="res://scene/player.tscn" id="7_a0bac"]
 
