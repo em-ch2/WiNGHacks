@@ -637,8 +637,4 @@ stream = ExtResource("2_a0bac")
 [node name="dragon" type="AudioStreamPlayer" parent="." unique_id=918754134]
 stream = ExtResource("3_tmyho")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=718509316]
-stream = ExtResource("2_a0bac")
-autoplay = true
-
 [connection signal="body_entered" from="Scene 1/Area2D" to="Scene 1" method="_on_area_2d_body_entered"]
