@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 
-const SPEED = 300.0
+const SPEED = 3000.0
 const JUMP_VELOCITY = -400.0
 var last_dir := "down"
 
@@ -12,9 +12,11 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("player_right"):
 		dir.x += 1
 	if Input.is_action_pressed("player_up_idle"):
-		dir.y -= 1
+		anim.play("player_up_idle")
+		last_dir = "up"
 	if Input.is_action_pressed("player_idle"):
-		dir.y += 1
+		anim.play("player_idle")
+		last_dir = "down"
 	
 	velocity = dir.normalized() * SPEED
 	move_and_slide()
