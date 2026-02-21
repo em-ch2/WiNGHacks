@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ggp60pyoxb46"
+path="res://.godot/imported/Lotus Pond - Loop.wav-016a80c0caa8f74462ead2f1b7ec5844.sample"
+
+[deps]
+
+source_file="res://assets/Lotus Pond - Loop.wav"
+dest_files=["res://.godot/imported/Lotus Pond - Loop.wav-016a80c0caa8f74462ead2f1b7ec5844.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
