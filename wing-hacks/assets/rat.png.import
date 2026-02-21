@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpxcmgupwomkq"
-path="res://.godot/imported/chicken-removebg-preview.png-b5508de9f9ffa258fc3e0fec2808e5a5.ctex"
+uid="uid://dfhggeo6g872f"
+path="res://.godot/imported/rat.png-b418fcc6025aca75e39ec85bc3691ead.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chicken-removebg-preview.png"
-dest_files=["res://.godot/imported/chicken-removebg-preview.png-b5508de9f9ffa258fc3e0fec2808e5a5.ctex"]
+source_file="res://assets/rat.png"
+dest_files=["res://.godot/imported/rat.png-b418fcc6025aca75e39ec85bc3691ead.ctex"]
 
 [params]
 
