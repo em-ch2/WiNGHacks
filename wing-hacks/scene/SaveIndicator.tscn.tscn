@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://copnttjfupuh8"]
+
+[ext_resource type="Texture2D" uid="uid://dbs0p5ux4uoiv" path="res://assets/dumpling_saved_logo.png" id="1_7rkql"]
+[ext_resource type="Script" uid="uid://cxx21bf4ybjs6" path="res://scene/save_logo.tscn.gd" id="1_we2ek"]
+
+[sub_resource type="Animation" id="Animation_we2ek"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jkjul"]
+resource_name = "save_loop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.3137255), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_att3c"]
+_data = {
+&"RESET": SubResource("Animation_we2ek"),
+&"save_loop": SubResource("Animation_jkjul")
+}
+
+[node name="SaveIndicator" type="CanvasLayer" unique_id=1682065486]
+script = ExtResource("1_we2ek")
+
+[node name="Control" type="Control" parent="." unique_id=227830628]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 290.0
+offset_bottom = 172.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1781499641]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.028
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = -0.11999512
+offset_bottom = 4.0
+texture = ExtResource("1_7rkql")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1432619746]
+libraries/ = SubResource("AnimationLibrary_att3c")

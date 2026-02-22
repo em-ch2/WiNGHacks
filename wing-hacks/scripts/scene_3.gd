@@ -3,6 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SaveIndicator.show_save_icon()
 	var player = $Player
 	var camera = player.get_node("player/Camera2D")
 	var tilemap = $TileMapLayer
