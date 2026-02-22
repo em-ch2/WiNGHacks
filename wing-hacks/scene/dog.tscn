@@ -2361,8 +2361,8 @@ position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_ev5km")
 
 [node name="Sprite2D" type="Sprite2D" parent="Scene 4/dog" unique_id=539849986]
-position = Vector2(-175, -25)
-scale = Vector2(0.08, 0.08)
+position = Vector2(-168.4, -30.2)
+scale = Vector2(0.10666667, 0.10122449)
 texture = ExtResource("5_dwiom")
 
 [connection signal="body_entered" from="Scene 4/Area2D" to="Scene 4" method="_on_area_2d_body_entered"]
