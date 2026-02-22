@@ -1,9 +1,9 @@
 ~ start
 if Global.offered_dumplings == true
 	if Global.minigame_success == true
-		Rooster: Thank you for the food!
+		Rooster: Thanks!
 	else:
-		Rooster: It wasn't what I was looking for...
+		Rooster: Seems like this isn't write...
 	set Global.offered_dumplings = false
 	=> END
 

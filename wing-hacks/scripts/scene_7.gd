@@ -1,8 +1,7 @@
 extends Node
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SaveIndicator.show_save_icon()
 	var player = $Player
 	var camera = player.get_node("player/Camera2D")
 	var tilemap = $TileMapLayer
@@ -37,3 +36,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _change_scene():
 	get_tree().call_deferred("change_scene_to_file", "res://scene/end_credits.tscn")
 		
+
+	if Input.is_action_just_pressed("narrator"):
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/Scene7.dialogue"), "start")
+		return

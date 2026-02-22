@@ -3,6 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SaveIndicator.show_save_icon()
 	var player = $Player
 	var camera = player.get_node("player/Camera2D")
 	var tilemap = $TileMapLayer
@@ -21,7 +22,6 @@ func _ready() -> void:
 	if Global.offered_dumplings and Global.player_start_posx != 0:
 		$Player.global_position = Vector2(Global.player_start_posx, Global.player_start_posy)
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/rooster.dialogue"), "start")
-	
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
@@ -29,6 +29,10 @@ func _unhandled_input(_event: InputEvent) -> void:
 		return
 	if Input.is_action_just_pressed("interact_sheep"):
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/sheep.dialogue"), "start")
+		return
+	if Input.is_action_just_pressed("narrator"):
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/Scene2.dialogue"), "start")
+		return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_area_2d_body_entered(body: Node2D) -> void:

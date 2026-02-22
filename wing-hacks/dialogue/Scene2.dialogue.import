@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cmap0s383y8mk"
+path="res://.godot/imported/Scene2.dialogue-8037dfee2b5000c1e1cd1a674718d2e8.tres"
+
+[deps]
+
+source_file="res://dialogue/Scene2.dialogue"
+dest_files=["res://.godot/imported/Scene2.dialogue-8037dfee2b5000c1e1cd1a674718d2e8.tres"]
+
+[params]
+
+defaults=true

@@ -1,13 +1,5 @@
 ~ start
 
-if Global.offered_dumplings == true
-	if Global.minigame_success == true
-		Pig: Well I guess all those years of practice paid off!
-	else:
-		Pig: How can this be even worse than I imagined?
-	set Global.offered_dumplings = false
-	=> END
-
 Horse: Oh? You’re far away from the Palace. Do you need me to take you back?
 Horse: …
 Horse: So you’ve been looking for me. My apologies, I’ve been incredibly busy preparing for Chinese New Year. It is, after all, the Year of the Horse. 
@@ -21,7 +13,7 @@ Horse: What troubles brought you to me?
 
 - ...
 	Horse: Hesitating?
-	- I’m scared of your answer. It might reveal a scary truth I can't face.
+	- I’m scared of your answer. It might reveal the truth I can't face.
 	Horse: I’m sure you met several of the Zodiacs on your way here. They all seemed to have given you different advice.
 	- Yes
 	Horse: I’m sure you already have the answer you seek. What you need is not advice...but courage.
@@ -38,25 +30,39 @@ Horse: What troubles brought you to me?
 	Horse: Do you like it so far?
 	
 	- I’ve never been so scared yet excited before...
+	=> HorseResponse1
 	- ...I want to experience the freedom you experience, but I don’t hate my family business...
+	=> HorseResponse1
 	- ... I thought I did, but I just longed for freedom. 
-	
-	Horse: Do you know what you have to do?
+	=> HorseResponse1
 	
 	- Yes. You have all given me the advice I needed...
-	- Companionship, enjoying what life has to offer, balancing duties and self, using resources, trusting others…and trailblazing with no fear...
+	=> HorseResponse2
+	- ...Companionship, enjoying what life has to offer, balancing duties and self, using resources, trusting others…and trailblazing with no fear...
+	=> HorseResponse2
 	- ...I will not fully abandon my family business, but I will also not sacrifice my identity.
+	=> HorseResponse2
+	- I will do both. Passion and duty.
+	=> HorseResponse2
 	
-	Horse: I'm glad you have not abandoned the passion inside you. What will you do now?
-	
-	- I won't immediately be free. But I will continue to walk towards my own goals...
-	- ...Just like my journey here.
-	
-	Horse: Very good. For now, why don't we go back to the Palace?
-	Horse: The Jade Emperor has prepared a feast for us. Perhaps, we'll try something different today!
+	- A small step goes a long way. I remember, many years ago, I...I tried dancing.
+	=> HorseResponse3
+	- ...Perhaps, I will try dancing again.
+	=> HorseResponse3
 
 - Walk away
-	if [Global.offered_dumplings == false]
-		Horse: I hope you found the answers you seek.
+	Horse: I hope you found the answers you seek.
 	=> END
+
+~ HorseResponse1
+	Horse: Do you know what you have to do?
+
+~ HorseResponse2
+	Horse: I'm glad you have not abandoned the passion inside you. What will you do now?
+
+~ HorseResponse3
+	Horse: Ah, dancing. The freedom of expression using one's body. It's a fitting hobby for you.
+	Horse: The Jade Emperor has prepared a feast for us. Perhaps, we'll also eat something new today!
+	Horse: Cheers to a Happy New Year!
+
 => END

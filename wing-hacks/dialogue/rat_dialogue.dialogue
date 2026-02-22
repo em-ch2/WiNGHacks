@@ -1,9 +1,9 @@
 ~ start
 if Global.offered_dumplings == true
 	if Global.minigame_success == true
-		Rooster: Thank you for the food!
+		Rat: Not bad!
 	else:
-		Rooster: It wasn't what I was looking for...
+		Rat: Not even I will scam for this...
 	set Global.offered_dumplings = false
 	=> END
 	
@@ -24,8 +24,9 @@ Rat: You’re walking further away from the Palace though. What are you looking 
 	Rat: What about doing part-time? You have to be resourceful and adapt well in order to grow. 
 	Rat: I bet you haven’t changed at all from 500 years ago!
 	- I suppose I never considered what I could do to navigate my problem…Rooster and Sheep mentioned finding help as well...
+	=> RatResponse1
 	- ...But can I really trust them with my family business? 500 years of lineage lies on me.
-	Rat: Trust? All you have to do is trust my advice! I won the Great Zodiac Race by using the animals around me, you know!
+	=> RatResponse1
 	- I’ll keep your advice in mind.
 	Rat: Well, keep going and I’m sure you’ll find the Horse. But you are getting further away from the Palace so you might meet...
 	- ?
@@ -43,7 +44,9 @@ Rat: You’re walking further away from the Palace though. What are you looking 
 	do Global.start_dumplings_minigame()
 	=> END
 - Walk away
-	if [Global.offered_dumplings == false]
-		Rat: So rude!
+	Rat: So rude!
 	=> END
+
+~ RatResponse1
+	Rat: Trust? All you have to do is trust my advice! I won the Great Zodiac Race by using the animals around me, you know!
 => END
