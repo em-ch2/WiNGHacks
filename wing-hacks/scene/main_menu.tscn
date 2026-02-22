@@ -165,10 +165,13 @@ position = Vector2i(375, 150)
 size = Vector2i(405, 262)
 content_scale_size = Vector2i(150, 150)
 ok_button_text = "OK"
-dialog_text = "WASD are the keys to play for this game.
+dialog_text = "WASD are the keys to play for movement in this game.
 
 Press the spacebar each time you interact with
-a character and listen to their stories.
+a character and read their stories.
+	-Press E for Sheep
+
+Press F to read the Narrator's dialogue at the beginning of each scene.
 
 If you'd like to engage in the mini-game, offer the
 NPC dumplings and click to add each ingredient to
