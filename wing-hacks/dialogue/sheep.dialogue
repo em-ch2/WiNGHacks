@@ -4,7 +4,7 @@ if Global.offered_dumplings == true
 	if Global.minigame_success == true
 		Sheep: Thank you for the food!
 	else:
-		Sheep: It wasn't what I was looking for...
+		Sheep: Sorry, this wasn't what I was looking for...
 	set Global.offered_dumplings = false
 	=> END
 

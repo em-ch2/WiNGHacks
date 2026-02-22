@@ -4,7 +4,7 @@ if Global.offered_dumplings == true
 	if Global.minigame_success == true
 		Pig: Well I guess all those years of practice paid off!
 	else:
-		Pig: How can this be even worse than I imagined?
+		Pig: Not right, but I'll still eat it.
 	set Global.offered_dumplings = false
 	=> END
 
@@ -28,13 +28,18 @@ Pig: Hmph, it does not matter. I’m rich enough to order my own. Now, why have 
 	
 ~ sub_menu
 - I was told the Zodiac animals can offer some valuable perspective on my situation...
+=> PigResponse1
 - ...I’m not sure what my path in life is anymore. It has always been taking over the family business but now…
-	Pig: Life does not need to be so complicated. If you like it, then you like it. If not, then stop doing it! I firmly believe life should be lived simply. No need to stress over the difficulties, and instead focus on the positives. 
+=> PigResponse1
+
 	- It's not that simple. My family's legacy relies on me.
 	Pig: Don't be so stubborn! Well I’m too lazy to change your mind. If you truly want to continue seeking advice then I suggest finding the Horse. There’s no one more headstrong than the Horse. 
 	Pig: I’m sure he can out-stubborn your 500 year old mindset!
 	=> main_menu
 - Back
 	=> main_menu
+
+~ PigResponse1
+	Pig: Life does not need to be so complicated. If you like it, then you like it. If not, then stop doing it! I firmly believe life should be lived simply. No need to stress over the difficulties, and instead focus on the positives.
 
 => END
