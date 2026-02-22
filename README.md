@@ -2,7 +2,7 @@
 A narrative-driven tapping game created for WingHacks 2026. Follow the journey of a hesitant merchant struggling with their family's dumpling business as they seek the legendary Horse of the Lunar Year to find the courage to break free from their limitations.
 
 # 🏮 The Story
-Throughout centuries, the main character has been in a family that makes dumplings to serve the Jade Emperor. Despite their skill, they feel trapped by tradition and hesitant about their future. Since it is the Lunar Year of the Horse, representing strength, speed, and the breaking of boundaries, the merchant sets out on a quest to find the mythical Horse. Only by finding this spirit can they discover the courage to pursue their true path.
+Throughout centuries, the main character has been in a family that makes dumplings to serve the Jade Emperor. Despite their skill, they feel trapped by tradition and hesitant about their future. Since it is the Lunar Year of the Horse, representing strength, speed, and the breaking of boundaries, the merchant sets out to discover themselves and meet various Zodiac animals. One of them being the Fire Horse itself, which provides unexpected guidance to the merchant's concerns.
 
 # 🛠️ Built With
 **Engine**: Godot 4.x
@@ -32,9 +32,9 @@ The core gameplay centers on a rhythmic tapping system that mirrors the preparat
 # 🚀 How to Play
 **Start**: Launch the game and select Start Game from the main menu.
 
-**Interact**: Talk to the animals through the celestial settings to learn clues about the Horse's whereabouts.
+**Interact**: Talk to the celestial Zodiacs and gain insight on different perspectives about traditions.
 
-**Minigame**: Master the tapping rhythm to create perfect dumplings and earn the favor of the Zodiacs.
+**Minigame**: Memorize the orders of the Zodiacs to create their dumplings.
 
 # Team
 **Emily Chen**- [Github](https://github.com/em-ch2)<br>
