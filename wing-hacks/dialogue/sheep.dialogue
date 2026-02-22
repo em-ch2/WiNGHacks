@@ -1,7 +1,5 @@
 ~ start
 
-Sheep: Bleat
-
 if Global.offered_dumplings == true
 	if Global.minigame_success == true
 		Sheep: Thank you for the food!
