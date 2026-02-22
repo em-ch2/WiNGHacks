@@ -642,7 +642,7 @@ position = Vector2(-289, -16)
 scale = Vector2(4, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="pig" unique_id=1307185934]
-position = Vector2(29.000004, -9.75)
+position = Vector2(28.249996, -5.25)
 scale = Vector2(0.05316666, 0.055854842)
 texture = ExtResource("5_0d3ao")
 
