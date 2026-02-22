@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dtawt3utaknnk"]
 
-[ext_resource type="Script" uid="uid://dxk1odfutfbe5" path="res://scripts/main_menu.gd" id="1_hxu56"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_hxu56"]
 [ext_resource type="Texture2D" uid="uid://bacdsgorrs4iu" path="res://assets/Screenshot 2026-02-21 113341.png" id="2_2fwvj"]
 [ext_resource type="Texture2D" uid="uid://d288ep3wd63tk" path="res://assets/IMG_6431-removebg-preview.png" id="3_0iwki"]
 [ext_resource type="Texture2D" uid="uid://rf3lbja8v764" path="res://assets/fire_horse.png" id="3_sepwh"]
@@ -175,7 +175,9 @@ Press F to read the Narrator's dialogue at the beginning of each scene.
 
 If you'd like to engage in the mini-game, offer the
 NPC dumplings and click to add each ingredient to
-the dumpling before clicking finish."
+the dumpling before clicking finish.
+
+The dumpling logo in the top left corner indicates progress being saved."
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=249953887]
 layout_mode = 0
