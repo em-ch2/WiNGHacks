@@ -1,8 +1,7 @@
 extends CanvasLayer
 
 func _ready():
-	# This runs the second the scene starts
-	show_save_icon()
+	hide_save_icon()
 
 func show_save_icon():
 	$Control.visible = true
