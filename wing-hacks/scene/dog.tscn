@@ -2336,6 +2336,7 @@ tile_map_data = PackedByteArray("AADh//T/BAAEAAoAAADh//X/BAAEAAsAAADh//b/BAAEAAw
 tile_set = SubResource("TileSet_k0rup")
 
 [node name="Player" parent="Scene 4" unique_id=1048355173 instance=ExtResource("4_ev5km")]
+z_index = 2
 position = Vector2(-389, -58.999992)
 scale = Vector2(0.05, 0.05)
 
@@ -2361,7 +2362,7 @@ position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_ev5km")
 
 [node name="Sprite2D" type="Sprite2D" parent="Scene 4/dog" unique_id=539849986]
-position = Vector2(-175, -25)
+position = Vector2(-191, -61)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("5_dwiom")
 
