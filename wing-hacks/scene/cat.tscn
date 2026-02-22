@@ -3060,14 +3060,14 @@ tile_map_data = PackedByteArray("AADh//T/AQAAAAgAAADh//X/AQAAAAkAAADh//b/AQAAAAo
 tile_set = SubResource("TileSet_u4uyh")
 
 [node name="Player" parent="Scene 6" unique_id=1048355173 instance=ExtResource("4_l4xcy")]
-position = Vector2(-347, 18)
+position = Vector2(-344, -54.999992)
 scale = Vector2(0.05, 0.05)
 
 [node name="collisions" type="StaticBody2D" parent="Scene 6" unique_id=409043514]
 position = Vector2(-988, -369)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Scene 6/collisions" unique_id=841701081]
-position = Vector2(419.4278, 163.09186)
+position = Vector2(413, 69)
 scale = Vector2(0.07243022, 0.069915794)
 polygon = PackedVector2Array(1225, -25, 10815, 45, 10857, 45, 10801, 2600, 12644, 2558, 12644, 4163, 1084.7988, 4289.562, 988.1538, 27.291992, -855, 6020, 13816, 6494, 14263, 1846, 13732, -1462, 1336, -1072, -813, -988, -4, -25)
 
@@ -3086,7 +3086,7 @@ shape = SubResource("RectangleShape2D_nweva")
 
 [node name="Sprite2D" type="Sprite2D" parent="cat" unique_id=2042949397]
 z_index = 1
-position = Vector2(-210, 45)
+position = Vector2(-211.00002, -24)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_l4xcy")
 
