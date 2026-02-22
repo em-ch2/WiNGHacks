@@ -34,7 +34,7 @@ The core gameplay centers on a rhythmic tapping system that mirrors the preparat
 
 **Interact**: Talk to the celestial Zodiacs and gain insight on different perspectives about traditions.
 
-**Minigame**: Memorize the orders of the Zodiacs to create their dumplings.
+**Minigame**: Memorize the Zodiacs's dumpling orders to create their dumplings.
 
 # Team
 **Emily Chen**- [Github](https://github.com/em-ch2)<br>
