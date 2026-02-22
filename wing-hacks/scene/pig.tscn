@@ -603,7 +603,6 @@ script = ExtResource("1_ha0f7")
 script = ExtResource("2_qcf1v")
 
 [node name="ColorRect" type="ColorRect" parent="Scene 3/transitions" unique_id=1908934923]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -618,7 +617,8 @@ tile_map_data = PackedByteArray("AADh//T/AAAAAAAAAADh//X/AAAAAAEAAADh//b/AAAAAAI
 tile_set = SubResource("TileSet_1fjgv")
 
 [node name="Player" parent="Scene 3" unique_id=1048355173 instance=ExtResource("4_gs26x")]
-position = Vector2(-360, -54)
+z_index = 2
+position = Vector2(-457.99997, -52.000004)
 scale = Vector2(0.05, 0.05)
 
 [node name="collisions" type="StaticBody2D" parent="Scene 3" unique_id=1293836259]
@@ -636,18 +636,18 @@ position = Vector2(288, 32)
 position = Vector2(-187, 9)
 shape = SubResource("RectangleShape2D_sewpc")
 
-[node name="pig" type="CharacterBody2D" parent="Scene 3" unique_id=1364019463]
+[node name="pig" type="CharacterBody2D" parent="." unique_id=1364019463]
 z_index = 1
 position = Vector2(-289, -16)
 scale = Vector2(4, 4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene 3/pig" unique_id=1004896327]
-position = Vector2(-93.00001, -67)
-shape = SubResource("RectangleShape2D_hvqpc")
-
-[node name="Sprite2D" type="Sprite2D" parent="Scene 3/pig" unique_id=1307185934]
-position = Vector2(21.249994, -1.25)
+[node name="Sprite2D" type="Sprite2D" parent="pig" unique_id=1307185934]
+position = Vector2(29.000004, -9.75)
 scale = Vector2(0.05316666, 0.055854842)
 texture = ExtResource("5_0d3ao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pig" unique_id=1004896327]
+position = Vector2(-93.00001, -67)
+shape = SubResource("RectangleShape2D_hvqpc")
 
 [connection signal="body_entered" from="Scene 3/Area2D" to="Scene 3" method="_on_area_2d_body_entered"]
