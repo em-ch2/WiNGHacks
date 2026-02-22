@@ -613,6 +613,7 @@ offset_left = -500.0
 offset_top = -206.0
 offset_right = 214.0
 offset_bottom = 95.0
+scale = Vector2(1.1, 1)
 texture = ExtResource("1_bqa5m")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Scene 1" unique_id=2080486036]
