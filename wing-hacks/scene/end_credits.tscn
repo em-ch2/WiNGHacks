@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://20w1g1g450uo"]
+
+[ext_resource type="Texture2D" uid="uid://dptqphciafvxl" path="res://assets/end_scene.jpg" id="1_bv0vb"]
+[ext_resource type="Script" uid="uid://bkiurld4k8u8r" path="res://scripts/end_credits.gd" id="1_j2g4e"]
+[ext_resource type="Texture2D" uid="uid://bxj4rdlue1cho" path="res://assets/mc_idle_sprites-removebg-preview.png" id="2_j2g4e"]
+[ext_resource type="Texture2D" uid="uid://b065cumucdkw8" path="res://assets/mc_idle_sprites_right-removebg-preview.png" id="3_i202d"]
+[ext_resource type="Texture2D" uid="uid://dwp7smi6a4ys4" path="res://assets/horse.png" id="4_l4qn4"]
+[ext_resource type="Texture2D" uid="uid://00ua18qpjwdx" path="res://assets/pig-removebg-preview.png" id="5_t16rj"]
+[ext_resource type="Texture2D" uid="uid://dart2p65vsekc" path="res://assets/rooster-removebg-preview.png" id="6_ef4kl"]
+[ext_resource type="Texture2D" uid="uid://l35lga0ebo5o" path="res://assets/sheep-removebg-preview.png" id="7_20uw6"]
+[ext_resource type="Texture2D" uid="uid://dfhggeo6g872f" path="res://assets/rat.png" id="8_5bi5q"]
+[ext_resource type="Texture2D" uid="uid://csel1uqh5fe8j" path="res://assets/cat.png" id="9_hilim"]
+[ext_resource type="Texture2D" uid="uid://b55rhfticckgt" path="res://assets/dog.png" id="10_l4bv3"]
+[ext_resource type="Texture2D" uid="uid://c0eak4dpane4y" path="res://assets/IMG_6434-removebg-preview.png" id="11_imh2x"]
+[ext_resource type="Texture2D" uid="uid://p7shsbi6b1ug" path="res://assets/IMG_6435-removebg-preview.png" id="12_yqpg8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chjkb"]
+atlas = ExtResource("2_j2g4e")
+region = Rect2(0, 0, 277, 449)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xqag"]
+atlas = ExtResource("2_j2g4e")
+region = Rect2(277, 0, 277, 449)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5qrw"]
+atlas = ExtResource("3_i202d")
+region = Rect2(0, 0, 275, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbiam"]
+atlas = ExtResource("3_i202d")
+region = Rect2(275, 0, 275, 448)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6w5qt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chjkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xqag")
+}],
+"loop": false,
+"name": &"dancing_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5qrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbiam")
+}],
+"loop": false,
+"name": &"dancing_2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="end_credits" type="Control" unique_id=251917697]
+layout_mode = 3
+anchor_top = -0.076000005
+anchor_right = 1.3980001
+anchor_bottom = 1.0
+offset_top = 67.248
+offset_right = -240.4961
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j2g4e")
+
+[node name="Background" type="TextureRect" parent="." unique_id=909308342]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.13
+anchor_bottom = 1.291
+offset_left = -0.99999976
+offset_top = -17.999996
+offset_right = -697.9889
+offset_bottom = -31.330017
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.35, 1.35)
+texture = ExtResource("1_bv0vb")
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=2067893675]
+visible = false
+modulate = Color(0.03529412, 0.015686275, 0, 0.9607843)
+layout_mode = 0
+offset_left = 1.333333
+offset_top = -12.0
+offset_right = 2010.3704
+offset_bottom = 1149.6295
+color = Color(0.0605343, 0.07753577, 0, 1)
+
+[node name="Player" type="AnimatedSprite2D" parent="Background" unique_id=2095821413]
+position = Vector2(517.03705, 351.8519)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_6w5qt")
+animation = &"dancing_2"
+
+[node name="Horse" type="Sprite2D" parent="Background" unique_id=1937990578]
+position = Vector2(725.1852, 365.9259)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_l4qn4")
+
+[node name="Pig" type="Sprite2D" parent="Background" unique_id=1587457980]
+position = Vector2(785.92596, 431.11115)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_t16rj")
+
+[node name="Rooster" type="Sprite2D" parent="Background" unique_id=629085362]
+position = Vector2(441.48148, 438.51852)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_ef4kl")
+
+[node name="Sheep" type="Sprite2D" parent="Background" unique_id=519174736]
+position = Vector2(612.5926, 430.37042)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_20uw6")
+
+[node name="Rat" type="Sprite2D" parent="Background" unique_id=1584802872]
+position = Vector2(334.0741, 448.88895)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_5bi5q")
+
+[node name="Cat" type="Sprite2D" parent="Background" unique_id=821519944]
+position = Vector2(243.70374, 433.33337)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_hilim")
+
+[node name="Dog" type="Sprite2D" parent="Background" unique_id=979162398]
+position = Vector2(363.70374, 391.85184)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_l4bv3")
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=787820613]
+layout_mode = 0
+offset_left = 512.5926
+offset_top = -5.925926
+offset_right = 1272.5928
+offset_bottom = 322.07407
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_imh2x")
+
+[node name="TextureRect2" type="TextureRect" parent="Background" unique_id=703046577]
+layout_mode = 0
+offset_left = 682.22217
+offset_top = 142.22221
+offset_right = 1442.2222
+offset_bottom = 470.2223
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_yqpg8")
+
+[connection signal="animation_finished" from="Background/Player" to="." method="_on_player_animation_finished"]

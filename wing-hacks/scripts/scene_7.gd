@@ -26,3 +26,14 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/horse.dialogue"), "start")
 		return
+		
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		# Change this line to point to 'transitions', NOT 'ColorRect'
+		var transition = get_node("transitions") 
+		transition.fade_out(Callable(self, "_change_scene"))
+		
+func _change_scene():
+	get_tree().call_deferred("change_scene_to_file", "res://scene/end_credits.tscn")
+		

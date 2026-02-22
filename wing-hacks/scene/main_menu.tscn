@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://dtawt3utaknnk"]
+
+[ext_resource type="Script" uid="uid://dxk1odfutfbe5" path="res://scripts/main_menu.gd" id="1_hxu56"]
+[ext_resource type="Texture2D" uid="uid://bacdsgorrs4iu" path="res://assets/Screenshot 2026-02-21 113341.png" id="2_2fwvj"]
+[ext_resource type="Texture2D" uid="uid://d288ep3wd63tk" path="res://assets/IMG_6431-removebg-preview.png" id="3_0iwki"]
+[ext_resource type="Texture2D" uid="uid://rf3lbja8v764" path="res://assets/fire_horse.png" id="3_sepwh"]
+[ext_resource type="Texture2D" uid="uid://cicpege1p0y53" path="res://assets/IMG_6430-removebg-preview.png" id="4_sepwh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14wem"]
+atlas = ExtResource("3_sepwh")
+region = Rect2(0, 588, 64, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2atga"]
+atlas = ExtResource("3_sepwh")
+region = Rect2(64, 588, 64, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by01r"]
+atlas = ExtResource("3_sepwh")
+region = Rect2(128, 588, 64, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dclss"]
+atlas = ExtResource("3_sepwh")
+region = Rect2(192, 588, 64, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmxu4"]
+atlas = ExtResource("3_sepwh")
+region = Rect2(256, 588, 64, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ictww"]
+atlas = ExtResource("3_sepwh")
+region = Rect2(320, 588, 64, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1o50l"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_14wem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2atga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by01r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dclss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmxu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ictww")
+}],
+"loop": true,
+"name": &"running_horse",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_cyejb"]
+resource_name = "Fade In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.099999994, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.03529412, 0.015686275, 0, 0.9607843), Color(0.03529412, 0.015686275, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qqsp2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.03529412, 0.015686275, 0, 0.9607843)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lyibd"]
+_data = {
+&"Fade In": SubResource("Animation_cyejb"),
+&"RESET": SubResource("Animation_qqsp2")
+}
+
+[node name="MainMenu" type="Control" unique_id=282954781]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hxu56")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2055414530]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -1.0000002
+offset_right = 852.0741
+offset_bottom = 479.7407
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.35, 1.35)
+texture = ExtResource("2_2fwvj")
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=1292319618]
+visible = false
+modulate = Color(0.03529412, 0.015686275, 0, 0.9607843)
+layout_mode = 0
+offset_left = 1.333333
+offset_top = -12.0
+offset_right = 860.3333
+offset_bottom = 473.0
+color = Color(0.0605343, 0.07753577, 0, 1)
+
+[node name="Horse" type="AnimatedSprite2D" parent="Background" unique_id=1905219353]
+position = Vector2(758.51855, 342.96298)
+scale = Vector2(2.222222, 2.222222)
+sprite_frames = SubResource("SpriteFrames_1o50l")
+animation = &"running_horse"
+autoplay = "running_horse"
+frame_progress = 0.12853439
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background" unique_id=574772372]
+layout_mode = 0
+offset_left = 315.55554
+offset_top = 289.62964
+offset_right = 416.55554
+offset_bottom = 355.62964
+scale = Vector2(2, 2)
+
+[node name="StartButton" type="Button" parent="Background/VBoxContainer" unique_id=723435968]
+layout_mode = 2
+text = "Start Game"
+
+[node name="InstructionButton" type="Button" parent="Background/VBoxContainer" unique_id=1029519760]
+layout_mode = 2
+text = "Instructions"
+
+[node name="fade_in" type="AnimationPlayer" parent="." unique_id=183554154]
+root_node = NodePath("../Background")
+libraries/ = SubResource("AnimationLibrary_lyibd")
+autoplay = &"Fade In"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=741482952]
+oversampling_override = 1.0
+title = "Instructions"
+position = Vector2i(375, 150)
+size = Vector2i(405, 262)
+content_scale_size = Vector2i(150, 150)
+ok_button_text = "OK"
+dialog_text = "WASD are the keys to play for this game.
+
+Press the spacebar each time you interact with
+a character and listen to their stories.
+
+If you'd like to engage in the mini-game, offer the
+NPC dumplings and click to add each ingredient to
+the dumpling before clicking finish."
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=249953887]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 52.0
+offset_right = 1031.0
+offset_bottom = 380.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_0iwki")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=924643947]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 189.0
+offset_right = 1116.0
+offset_bottom = 517.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_sepwh")
+
+[connection signal="pressed" from="Background/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/InstructionButton" to="." method="_on_instruction_button_pressed"]
