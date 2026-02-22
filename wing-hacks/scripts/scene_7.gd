@@ -19,7 +19,6 @@ func _ready() -> void:
 	camera.limit_bottom = map_pixel_position.y + map_pixel_size.y
 	
 	Music.player.stream = preload("res://assets/Dragon Dance - Loop.wav")
-	player.volume_db = -6
 	Music.player.play()
 
 func _unhandled_input(_event: InputEvent) -> void:
