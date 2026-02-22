@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dtawt3utaknnk"]
 
-[ext_resource type="Script" uid="uid://dxk1odfutfbe5" path="res://scripts/main_menu.gd" id="1_hxu56"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_hxu56"]
 [ext_resource type="Texture2D" uid="uid://bacdsgorrs4iu" path="res://assets/Screenshot 2026-02-21 113341.png" id="2_2fwvj"]
 [ext_resource type="Texture2D" uid="uid://d288ep3wd63tk" path="res://assets/IMG_6431-removebg-preview.png" id="3_0iwki"]
 [ext_resource type="Texture2D" uid="uid://rf3lbja8v764" path="res://assets/fire_horse.png" id="3_sepwh"]
 [ext_resource type="Texture2D" uid="uid://cicpege1p0y53" path="res://assets/IMG_6430-removebg-preview.png" id="4_sepwh"]
+[ext_resource type="Texture2D" uid="uid://ccjvcshw27in4" path="res://assets/lantern_logo_bg.png" id="6_14wem"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_14wem"]
 atlas = ExtResource("3_sepwh")
@@ -190,6 +191,26 @@ offset_right = 1116.0
 offset_bottom = 517.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_sepwh")
+
+[node name="Lantern" type="TextureRect" parent="." unique_id=1094903049]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 0
+offset_left = 939.00006
+offset_top = -4.0
+offset_right = 1430.0
+offset_bottom = 549.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_14wem")
+
+[node name="Lantern2" type="TextureRect" parent="." unique_id=1920979957]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 0
+offset_left = 59.0
+offset_top = -8.0
+offset_right = 550.0
+offset_bottom = 545.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_14wem")
 
 [connection signal="pressed" from="Background/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Background/VBoxContainer/InstructionButton" to="." method="_on_instruction_button_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://copnttjfupuh8"]
 
 [ext_resource type="Texture2D" uid="uid://dbs0p5ux4uoiv" path="res://assets/dumpling_saved_logo.png" id="1_7rkql"]
-[ext_resource type="Script" uid="uid://cxx21bf4ybjs6" path="res://scene/save_logo.tscn.gd" id="1_we2ek"]
+[ext_resource type="Script" uid="uid://cxx21bf4ybjs6" path="res://save_logo.tscn.gd" id="1_we2ek"]
 
 [sub_resource type="Animation" id="Animation_we2ek"]
 length = 0.001
