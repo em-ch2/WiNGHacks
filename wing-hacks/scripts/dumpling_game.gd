@@ -21,7 +21,11 @@ var img_everything = preload("res://assets/Everything.jpeg")
 
 func _ready():
 	dumpling_sprite.scale = Vector2(0.3, 0.3)
-	required_ingredients = GameManager.current_order.split(",")
+	var ingredients = GameManager.current_order.split(",")
+	required_ingredients = []
+	for item in ingredients:
+		required_ingredients.append(item.strip_edges())
+	
 	added_ingredients.clear()
 	dumpling_sprite.texture = img_empty
 	is_ruined = false
