@@ -56,7 +56,6 @@ Horse: What troubles brought you to me?
 	Horse: The Jade Emperor has prepared a feast for us. Perhaps, we'll try something different today!
 
 - Walk away
-	if [Global.offered_dumplings == false]
-		Horse: I hope you found the answers you seek.
+	Horse: I hope you found the answers you seek.
 	=> END
 => END

@@ -25,8 +25,7 @@ Sheep: Dumpling making is a delicate process that requires great patience. You m
 	do Global.start_dumplings_minigame()
 	=> END
 - Walk away
-	if [Global.offered_dumplings == false]
-		Sheep: Oh, see you another time.
+	Sheep: Oh, see you another time.
 	=> END
 	
 ~ sub_menu

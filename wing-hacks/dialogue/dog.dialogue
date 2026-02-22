@@ -33,7 +33,6 @@ Dog: But hey, I will love to help you with whatever you’re having trouble with
 	do Global.start_dumplings_minigame()
 	=> END
 - Walk away
-	if [Global.offered_dumplings == false]
-		Dog: Aww, you don’t want to talk to me?
+	Dog: Aww, you don’t want to talk to me?
 	=> END
 => END

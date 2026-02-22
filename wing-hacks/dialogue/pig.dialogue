@@ -23,8 +23,7 @@ Pig: Hmph, it does not matter. I’m rich enough to order my own. Now, why have 
 	do Global.start_dumplings_minigame()
 	=> END
 - Walk away
-	if [Global.offered_dumplings == false]
-		Pig: Well, time for me to go back to sleep.
+	Pig: Well, time for me to go back to sleep.
 	=> END
 	
 ~ sub_menu

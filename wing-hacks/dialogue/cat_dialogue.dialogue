@@ -44,7 +44,6 @@ Cat: You…You smell like the Rat! How dare you come near me!
 	do Global.start_dumplings_minigame()
 	=> END
 - Walk away
-	if [Global.offered_dumplings == false]
-		Cat: Typical...
+	Cat: Typical...
 	=> END
 => END

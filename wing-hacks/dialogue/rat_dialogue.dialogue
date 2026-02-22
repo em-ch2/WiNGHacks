@@ -43,7 +43,6 @@ Rat: You’re walking further away from the Palace though. What are you looking 
 	do Global.start_dumplings_minigame()
 	=> END
 - Walk away
-	if [Global.offered_dumplings == false]
-		Rat: So rude!
+	Rat: So rude!
 	=> END
 => END
