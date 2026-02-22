@@ -22,6 +22,9 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/pig.dialogue"), "start")
 		return
+	if Input.is_action_just_pressed("narrator"):
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/Scene3.dialogue"), "start")
+		return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_area_2d_body_entered(body: Node2D) -> void:
