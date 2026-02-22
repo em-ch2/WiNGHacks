@@ -3090,7 +3090,7 @@ shape = SubResource("RectangleShape2D_nweva")
 
 [node name="Sprite2D" type="Sprite2D" parent="cat" unique_id=2042949397]
 z_index = 1
-position = Vector2(-26, -76)
+position = Vector2(-52, -19)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_l4xcy")
 
